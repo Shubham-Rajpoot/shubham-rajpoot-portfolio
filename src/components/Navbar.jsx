@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling the menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,12 +25,12 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto px-5">
-        {/* Logo */}
+        
         <div className="text-3xl text-white font-thin">
           <p>Shubham Rajpoot</p>
         </div>
 
-        {/* Navigation Links for Desktop */}
+        
         <div className="hidden md:flex text-white">
           <ul className="flex items-center gap-6">
             <li>Home</li>
@@ -44,7 +44,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Hamburger Menu for Mobile */}
+       
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -68,10 +68,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+  
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white p-4 absolute top-0 right-0 w-full h-screen">
-          {/* Close Button (X) */}
+      
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-4 right-4 text-white text-3xl"

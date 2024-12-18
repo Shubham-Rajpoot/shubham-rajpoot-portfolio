@@ -2,6 +2,7 @@ import React from "react";
 import profile from "../assets/ph1.jpg";
 import leetcode from "../assets/LeetCode_logo_black.png";
 import codeforces from "../assets/codeforces.jpg";
+import { FaArrowDown } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
@@ -78,35 +79,39 @@ const HeroSection = () => {
                 />
               </a>
             </div>
-        <div className="mt-6">
-          <span className="text-gray-400 text-3xl animate-bounce">⌄</span>
-        </div>
+
+            <div className="mt-9 animate-bounce">
+              <FaArrowDown className="text-gray-400 text-3xl" />
+            </div>
           </div>
         </div>
       </section>
 
-      
-
-      <section className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-4">
+      <section className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-4 py-12 relative">
+        {/* Title Section */}
         <p className="text-lg text-gray-300 mb-2 tracking-wider uppercase">
           Get To Know More
         </p>
-        <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">
+        <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white text-center animate-pulse">
           About Me
         </h1>
 
+        {/* Content Section */}
         <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full mx-auto gap-8">
+          {/* Profile Image */}
           <div className="w-full md:w-1/3 flex justify-center">
             <img
               src={profile}
               alt="Profile"
-              className="rounded-lg h-80 w-80 object-cover shadow-xl"
+              className="rounded-lg h-80 w-80 object-cover shadow-xl transform transition duration-500 hover:scale-105"
             />
           </div>
 
-          <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-6 text-center md:text-left ">
-            <div className="flex-1 bg-zinc-900 rounded-lg p-6 shadow-lg border-solid border-2 border-s-white">
-              <h2 className="text-3xl font-semibold text-white mb-2 flex items-center justify-center gap-2 ">
+          {/* Details Section */}
+          <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-6 text-center md:text-left">
+            {/* Certifications */}
+            <div className="flex-1 bg-zinc-900 rounded-lg p-6 shadow-lg border-solid border-2 border-teal-600">
+              <h2 className="text-3xl font-semibold text-white mb-2 flex items-center justify-center gap-2">
                 <span>🎓</span> Certifications
               </h2>
               <p className="text-white text-sm mb-1">
@@ -121,7 +126,8 @@ const HeroSection = () => {
               <p className="text-white text-xs">Red Hat</p>
             </div>
 
-            <div className="flex-1 bg-zinc-900 rounded-lg p-6 shadow-lg border-solid border-2 border-s-white">
+            {/* Education */}
+            <div className="flex-1 bg-zinc-900 rounded-lg p-6 shadow-lg border-solid border-2 border-teal-600">
               <h2 className="text-3xl font-semibold text-white mb-2 flex items-center justify-center gap-2">
                 <span>👨‍💻</span> Education
               </h2>
@@ -131,11 +137,12 @@ const HeroSection = () => {
               <p className="text-white text-xs">
                 Meerut Institute of Engineering and Technology
               </p>
-                <span>CGPA - 8.2 </span>
+              <p className="text-white text-xs">CGPA - 8.2</p>
             </div>
           </div>
         </div>
 
+        {/* Personal Introduction */}
         <div className="mt-12 max-w-4xl mx-auto text-center text-gray-300 text-lg leading-relaxed">
           <p>
             Hello! I am{" "}
@@ -144,12 +151,13 @@ const HeroSection = () => {
             C++, Data Structures and Algorithms, and MERN stack development,
             I’ve built projects like Nirman Saathi to solve real-world
             challenges. I’m passionate about technology and eager to contribute
-            my skills to a dynamic organization
+            my skills to a dynamic organization.
           </p>
         </div>
 
-        <div className="mt-6">
-          <span className="text-gray-400 text-3xl animate-bounce">⌄</span>
+        {/* Arrow Indicator */}
+        <div className="mt-6 animate-bounce">
+          <FaArrowDown className="text-gray-400 text-3xl" />
         </div>
       </section>
     </>
